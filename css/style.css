@@ -7,14 +7,15 @@ button {
 
 body {
   font-family: 'Lato', sans-serif;
-  max-width: 1000px;
   margin: 0 auto;
-  display: grid;
-  grid-template-areas: 'head head' 'file download' 'gallery gallery' 'credits credits';
 }
 
 header {
   grid-area: head;
+}
+
+a {
+  text-decoration: underline;
 }
 
 h1,
@@ -34,12 +35,29 @@ figcaption {
   padding-bottom: 1rem;
 }
 
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: 'file download' 'gallery gallery';
+}
+
 header,
 #file-input,
 #download-button,
 #gallery,
 #credits {
   padding: 2rem;
+}
+
+header,
+footer {
+  color: white;
+  background-color: #000000;
+}
+
+header>h1 {
+  color: white;
 }
 
 #file-input {
@@ -114,9 +132,12 @@ svg {
 
 /* Credits */
 
-#credits {
-  grid-area: credits;
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
 
