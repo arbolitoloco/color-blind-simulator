@@ -84,12 +84,18 @@
     <h1>Color Blindness Simulator</h1>
   </header>
   <main>
+    <section id="explanation">
+      <p>Need a quick way to make sure your design/diagram/figure is colorblind-friendly?</p>
+      <p>Use this simulator to check out if your colors will retain the same effect for different kinds of vision.</p>
+      <p>Conveniently download transformed gallery for future reference.</p>
+    </section>
     <div id="file-input">
-      <h2>Step1. Select an image file</h2>
+      <h2><span class="emphasized">Step 1.</span> Select an image file</h2>
       <input type="file" id="img-picker" accept="image/*">
+      <p>Gallery will replace the one below.</p>
     </div>
     <div id="download-button">
-      <h2>Step 2. Click button to download gallery</h2>
+      <h2><span class="emphasized">Step 2.</span> Click button to download gallery</h2>
       <button onclick="downloadGallery()">Download simulations</button>
     </div>
     <a href="" id="blank" style="display: none"></a>

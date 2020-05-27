@@ -1,17 +1,17 @@
 /* General styles */
 
-button {
-  background-color: yellow;
-  padding: 1rem;
-}
-
 body {
   font-family: 'Lato', sans-serif;
   margin: 0 auto;
 }
 
-header {
-  grid-area: head;
+svg {
+  position: absolute;
+}
+
+button {
+  background-color: yellow;
+  padding: 1rem;
 }
 
 a {
@@ -29,25 +29,39 @@ h1 {
   font-size: 2.2rem;
 }
 
+h2 {
+  font-size: 1.2rem;
+}
+
+figure {
+  margin: 0 auto;
+  padding: 1rem 0 1rem 0;
+}
+
 figcaption {
   text-transform: uppercase;
   font-size: 1.2rem;
   padding-bottom: 1rem;
 }
 
-main {
-  max-width: 1000px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-areas: 'file download' 'gallery gallery';
+.emphasized {
+  font-weight: 600;
 }
 
+
+/* Page areas */
+
 header,
+#explanation,
 #file-input,
 #download-button,
 #gallery,
 #credits {
   padding: 2rem;
+}
+
+header {
+  grid-area: head;
 }
 
 header,
@@ -60,6 +74,17 @@ header>h1 {
   color: white;
 }
 
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: 'explanation explanation' 'file download' 'gallery gallery';
+}
+
+#explanation {
+  grid-area: explanation;
+}
+
 #file-input {
   grid-area: file;
 }
@@ -67,9 +92,6 @@ header>h1 {
 #download-button {
   grid-area: download;
 }
-
-
-/* Image gallery */
 
 #gallery {
   grid-area: gallery;
@@ -80,19 +102,10 @@ header>h1 {
   margin: 0 auto;
 }
 
-figure {
-  margin: 0 auto;
-  padding: 1rem 0 1rem 0;
-}
-
-svg {
-  position: absolute;
-}
-
 .img {
   /* display: block; */
   /* width: 100%; */
-  width: 300px;
+  max-width: 300px;
   height: auto;
   margin: 0 auto;
 }
