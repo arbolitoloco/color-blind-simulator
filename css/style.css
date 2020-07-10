@@ -75,10 +75,16 @@ header>h1 {
 }
 
 main {
-  max-width: 1000px;
   margin: 0 auto;
   display: grid;
-  grid-template-areas: 'explanation explanation' 'file download' 'gallery gallery';
+  grid-template-areas: 'explanation' 'file' 'download' 'gallery';
+}
+
+@media only screen and (min-width: 600px) {
+  main {
+    max-width: 1000px;
+    grid-template-areas: 'explanation explanation' 'file download' 'gallery gallery';
+  }
 }
 
 #explanation {
@@ -96,10 +102,10 @@ main {
 #gallery {
   grid-area: gallery;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   column-gap: 10px;
   padding: 1rem;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .img {
@@ -146,9 +152,9 @@ main {
 /* Credits */
 
 footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 2rem;
   text-align: center;
 }
