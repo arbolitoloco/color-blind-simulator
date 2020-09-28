@@ -28,7 +28,7 @@ If you'd like to have the app to use it offline, head over to the releases page 
 
 ## Privacy and data
 
-All image manipulations (and upload) happen on the client-side only, meaning no data is collected at all.
+All image manipulations (and upload) happen on the client-side only, meaning no data is collected at all. There is a Google Analytics snippet to track visitors and usage, so browsing isn't entirely anonymous.
 
 ## Contributing
 
