@@ -1,6 +1,24 @@
-# Color Blindness Simulator
+<h1 align="center">Color Blindness Simulator</h1><br>
+<p align="center">
+  <a href="https://laura.rochaprado.com/color-blind-simulator/">
+    <img alt="Color Blindness Simulator logo" title="Color Blindness Simulator" src="./img/logo.png" width="200">
+  </a>
+</p>
 
-A quick way to visualize an image using different color blindness simulation filters, and download the resulting gallery at once for analysis.
+<p align="center">
+  A quick way to visualize an image using different color blindness simulation filters. Upload your file and check the updated gallery. Download the resulting gallery at once for analysis.
+</p>
+
+<p align="center">
+
+  <a href="">
+    <img alt="Go to App" title="App Link" src="" width="140">
+  </a>
+
+  <a href="">
+    <img alt="Get it on Github" title="Github download" src="" width="140">
+  </a>
+</p>
 
 ## Background
 
@@ -18,9 +36,9 @@ If you'd like to try it out, head over to the working app at https://laura.rocha
 
 There are only 2-3 steps:
 
-1. Upload the desired image for testing (accepts any file with an image/\* MIME type; tested with `png`, `jpg`, `gif`, `svg`, `ico`)
+1. Upload the desired image for testing (accepts any file with an `image/\* MIME type`; tested with `png`, `jpg`, `gif`, `svg`, `ico`)
 2. Wait shortly until main gallery is updated with resulting simulations
-3. Download results if you are so inclined.
+3. Download resulting gallery if you are so inclined
 
 ### Install to use locally
 
@@ -33,3 +51,7 @@ All image manipulations (and upload) happen on the client-side only, meaning no 
 ## Contributing
 
 Thanks for your interest in contributing to improve this app! I am in the process of creating a specific document to list current issues or development features.
+
+## Acknowledgements
+
+This app modifies functions for canvas redrawing found in [cyan33's image-screenshot](https://github.com/cyan33/image-screenshot/), as well as [html2canvas 1.0.0-rc.5](https://github.com/niklasvh/html2canvas/) to facilitate image downloads.
