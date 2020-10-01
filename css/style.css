@@ -1,3 +1,5 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
 /* General styles */
 
 body {
@@ -103,6 +105,8 @@ main {
   box-shadow: 0 0 20px #ccc;
   border-radius: 15px;
   color: white;
+  font-size: larger;
+  margin: 20px;
 }
 #download-button button:hover {
   background-color: #3e8e41;
