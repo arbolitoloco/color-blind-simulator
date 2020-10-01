@@ -12,13 +12,10 @@
 
 <p align="center">
 
-  <a href="">
-    <img alt="Go to App" title="App Link" src="" width="140">
+  <a href="https://laura.rochaprado.com/color-blind-simulator/">
+    <img alt="Go to App" title="App Link" src="img/button_go-to-app.png" width="140">
   </a>
 
-  <a href="">
-    <img alt="Get it on Github" title="Github download" src="" width="140">
-  </a>
 </p>
 
 ## Background
@@ -62,4 +59,4 @@ Thanks for your interest in contributing to improve this app! For more detail, p
 
 ## Acknowledgements
 
-This app modifies functions for canvas redrawing found in [cyan33's image-screenshot](https://github.com/cyan33/image-screenshot/), as well as [html2canvas 1.0.0-rc.5](https://github.com/niklasvh/html2canvas/) to facilitate image downloads. SVG filter values were gathered from
+This app modifies functions for canvas redrawing found in [cyan33's image-screenshot](https://github.com/cyan33/image-screenshot/), as well as [html2canvas 1.0.0-rc.5](https://github.com/niklasvh/html2canvas/) to facilitate image downloads.
