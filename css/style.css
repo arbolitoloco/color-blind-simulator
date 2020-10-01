@@ -99,6 +99,15 @@ main {
   grid-area: download;
 }
 
+#download-simulations-btn {
+  box-shadow: 0 0 20px #ccc;
+  border-radius: 15px;
+  opacity: 0.6;
+}
+#download-simulations-btn:hover {
+  opacity: 1;
+}
+
 #gallery {
   grid-area: gallery;
   display: grid;
