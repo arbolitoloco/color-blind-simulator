@@ -10,7 +10,7 @@ svg {
 }
 
 button {
-  background-color: yellow;
+  background-color: #4CAF50;
   padding: 1rem;
 }
 
@@ -99,13 +99,13 @@ main {
   grid-area: download;
 }
 
-.download-simulations-btn {
+#download-button button {
   box-shadow: 0 0 20px #ccc;
   border-radius: 15px;
-  opacity: 0.6;
+  color: white;
 }
-.download-simulations-btn:hover {
-  opacity: 1;
+#download-button button:hover {
+  background-color: #3e8e41;
 }
 
 #gallery {
