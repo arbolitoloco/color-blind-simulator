@@ -1,7 +1,8 @@
 <h1 align="center">Color Blindness Simulator</h1><br>
 <p align="center">
   <a href="https://laura.rochaprado.com/color-blind-simulator/">
-    <img alt="Color Blindness Simulator logo" title="Color Blindness Simulator" src="./img/logo.png" width="200">
+    <!-- <img alt="Color Blindness Simulator logo" title="Color Blindness Simulator" src="./img/logo.png" width="200"> -->
+  <img alt="Color Blindness Simulator app" title="Color Blindness Simulator" src="./img/screenshot.jpg" width="100%">
   </a>
 </p>
 
@@ -44,14 +45,21 @@ There are only 2-3 steps:
 
 If you'd like to have the app to use it offline, head over to the releases page and download the latest bundle. Simply extract the contents of the package into a folder, and double click the `index.html` file to open it in any browser.
 
+### Examples
+
+<p align="center">
+  <img alt="Color Blindness Simulator example 1" title="Color Blindness Simulator example 1" src="./img/colorblind-gallery-logo.png" width="100%">
+  <img alt="Color Blindness Simulator example 2" title="Color Blindness Simulator Example 2" src="./img/colorblind-gallery-biorepo-data-flow-chart-v0.png" width="100%">
+</p>
+
 ## Privacy and data
 
 All image manipulations (and upload) happen on the client-side only, meaning no data is collected at all. There is a Google Analytics snippet to track visitors and usage, so browsing isn't entirely anonymous.
 
 ## Contributing
 
-Thanks for your interest in contributing to improve this app! I am in the process of creating a specific document to list current issues or development features.
+Thanks for your interest in contributing to improve this app! For more detail, please check our [Contributing doc](CONTRIBUTING.md).
 
 ## Acknowledgements
 
-This app modifies functions for canvas redrawing found in [cyan33's image-screenshot](https://github.com/cyan33/image-screenshot/), as well as [html2canvas 1.0.0-rc.5](https://github.com/niklasvh/html2canvas/) to facilitate image downloads.
+This app modifies functions for canvas redrawing found in [cyan33's image-screenshot](https://github.com/cyan33/image-screenshot/), as well as [html2canvas 1.0.0-rc.5](https://github.com/niklasvh/html2canvas/) to facilitate image downloads. SVG filter values were gathered from
