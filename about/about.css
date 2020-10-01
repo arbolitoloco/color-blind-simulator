@@ -1,0 +1,22 @@
+main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction:column;
+    
+}
+
+.container{
+    padding:0 2vw 0 2vw;
+}
+
+p{
+    margin:0.5em;
+}
+
+.titles{
+    margin:0.3em 0 0.3em 0;
+}
+
+.groups{
+    margin:7vh 0 7vh 0;
+}
