@@ -157,6 +157,52 @@ main {
   filter: url('#achromatopsia');
 }
 
+/* Contributors Gallery */
+#contributors {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#contributors > h2 {
+  margin: 20px 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#contributor-gallery {
+  max-width: 1100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contributor {
+  display: flex;
+  border: 1px solid #3d3d4d;
+  border-radius: 15px;
+  margin: 10px 20px;
+  padding: 20px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contributor > img {
+  border: 1px solid #3d3d4d;
+  margin-bottom: 20px;
+  height: 126px;
+  width: 126px;
+  border-radius: 50%;
+}
+
+.contributor > a {
+  color: #494949;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 
 /* Credits */
 
