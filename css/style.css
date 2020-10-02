@@ -62,6 +62,13 @@ header,
 
 header {
   grid-area: head;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header h1, header img{
+  max-height: 70px;
+  margin: auto 10px;
 }
 
 header,
