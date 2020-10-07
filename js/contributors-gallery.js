@@ -1,11 +1,3 @@
-{/* <div id="contributor-gallery">
-      <div class="contributor">
-        <img src="https://avatars0.githubusercontent.com/u/17555247?v=4" alt="arbolitoloco" />
-        <strong>arbolitoloco</strong>
-        <a href="https://github.com/arbolitoloco">github.com/arbolitoloco</a>
-      </div>
-    </div> */}
-
 const contributorGallery = document.getElementById('contributors-gallery');
 
 const buildContributorCard = (contributor) => {
@@ -33,3 +25,4 @@ fetch('https://api.github.com/repos/arbolitoloco/color-blind-simulator/contribut
       data.map((contributor) => buildContributorCard(contributor));
     })
     .catch((err) => console.warn('Problem retrieving contributors.', err));
+    
