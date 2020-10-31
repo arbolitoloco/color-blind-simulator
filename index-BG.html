@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-54918754-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-54918754-3');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Blindness Simulator</title>
+  <link rel="stylesheet" href="css/destyle.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Filter definitions -->
+  <svg id="colorblind-filters" style="display:none;">
+    <defs>
+      <filter id="protanomaly">
+        <feColorMatrix in="SourceGraphic"
+          type="matrix" 
+          values="0.817 0.183 0 0 0
+                  0.333 0.667 0 0 0
+                  0 0.125 0.875 0 0
+                  0 0 0 1 0" />
+      </filter>
+      <filter id="protanopia">
+        <feColorMatrix in="SourceGraphic"
+          type="matrix"
+          values="0.567 0.433 0 0 0
+                  0.558 0.442 0 0 0
+                  0 0.242 0.758 0 0 
+                  0 0 0 1 0"  />
+      </filter>
+      <filter id="deuteranomaly">
+        <feColorMatrix in="SourceGraphic"
+          type="matrix"
+          values="0.8 0.2 0 0 0
+                  0.258 0.742 0 0 0
+                  0 0.142 0.858 0 0
+                  0 0 0 1 0"  />
+      </filter>
+      <filter id="deuteranopia">
+        <feColorMatrix in="SourceGraphic"
+          type="matrix"
+          values="0.625 0.375 0 0 0
+                  0.7 0.3 0 0 0 
+                  0 0.3 0.7 0 0
+                  0 0 0 1 0" />
+      </filter>
+      <filter id="tritanomaly">
+        <feColorMatrix in="SourceGraphic"
+          type="matrix"
+          values="0.967 0.033 0 0 0
+                  0 0.733 0.267 0 0
+                  0 0.183 0.817 0 0
+                  0 0 0 1 0"  />
+      </filter>
+      <filter id="tritanopia">
+        <feColorMatrix in="SourceGraphic"
+          type="matrix"
+          values="0.95 0.05 0 0 0
+                  0 0.433 0.567 0 0
+                  0 0.475 0.525 0 0
+                  0 0 0 1 0"  />
+      </filter>
+      <filter id="achromatomaly">
+        <feColorMatrix in="SourceGraphic"
+          type="matrix"
+          values="0.618 0.320 0.062 0 0
+                  0.163 0.775 0.062 0 0
+                  0.163 0.320 0.516 0 0
+                  0 0 0 1 0"  />
+      </filter>
+      <filter id="achromatopsia">
+        <feColorMatrix in="SourceGraphic"
+          type="matrix"
+          values="0.299 0.587 0.114 0 0
+                  0.299 0.587 0.114 0 0
+                  0.299 0.587 0.114 0 0
+                  0 0 0 1 0"  />
+      </filter>
+    </defs>
+  </svg>
+  <header>
+    <h1>Симулатор на далтонизъм</h1>
+  </header>
+  <main>
+    <section id="explanation">
+      <p>Нуждаете ли се от бърз начин, за да се уверите, че вашият дизайн / диаграма / фигура е подходяща за хора с далтонизъм?</p>
+      <p>Използвайте този симулатор, за да проверите дали цветовете ви ще запазят един и същ ефект за различните видове зрение.</p>
+      <p>Изтеглете удобно трансформираната галерия за бъдеща справка.</p>
+    </section>
+    <div id="file-input">
+      <h2><span class="emphasized">Стъпка 1.</span> Изберете файл с изображение</h2>
+      <input type="file" id="img-picker" accept="image/*">
+      <p>Галерията ще замени тези по-долу</p>
+    </div>
+    <div id="download-button">
+      <h2><span class="emphasized">Стъпка 2.</span> Кликнете върху бутона, за да изтеглите галерията</h2>
+      <button onclick="downloadGallery()">Изтеглете симулации</button>
+    </div>
+    <a href="" id="blank" style="display: none"></a>
+    <div id="gallery">
+      <figure>
+        <figcaption>Нормално</figcaption>
+        <img id="normalImg" src="./img/conical-gradient.png" alt="Uploaded normal image" style="width: 300px; height: auto;">
+      </figure>
+      <figure>
+        <figcaption>протаномалия</figcaption><img src="./img/conical-gradient.png" class="img--protanomaly" style="width: 300px; height: auto;"></figure>
+      <figure>
+        <figcaption>протанопия</figcaption><img src="./img/conical-gradient.png" class="img--protanopia" style="width: 300px; height: auto;"></figure>
+      <figure>
+        <figcaption>дейтераномалия</figcaption><img src="./img/conical-gradient.png" class="img--deuteranomaly" style="width: 300px; height: auto;"></figure>
+      <figure>
+        <figcaption>дейтеранопия</figcaption><img src="./img/conical-gradient.png" class="img--deuteranopia" style="width: 300px; height: auto;"></figure>
+      <figure>
+        <figcaption>тританомалия</figcaption><img src="./img/conical-gradient.png" class="img--tritanomaly" style="width: 300px; height: auto;"></figure>
+      <figure>
+        <figcaption>тританопия</figcaption><img src="./img/conical-gradient.png" class="img--tritanopia" style="width: 300px; height: auto;"></figure>
+      <figure>
+        <figcaption>ахроматомалия</figcaption><img src="./img/conical-gradient.png" class="img--achromatomaly" style="width: 300px; height: auto;"></figure>
+      <figure>
+        <figcaption>ахроматопсия</figcaption><img src="./img/conical-gradient.png" class="img--achromatopsia" style="width: 300px; height: auto;"></figure>
+    </div>
+  </main>
+  <footer>
+    <p>Направено с 🤍 от <a href="https://laura.rochaprado.com" target="_blank" rel="noopener noreferrer">LRP</a> &middot 2020</p>
+    <!-- <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/arbolitoloco"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin:5px;font-size:19px !important;">Buy me a coffee</span></a> -->
+  </footer>
+
+</body>
+<script src="js/html2canvas.min.js"></script>
+<script src="js/filters.js"></script>
+
+</html>
