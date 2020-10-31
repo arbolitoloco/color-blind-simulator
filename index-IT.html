@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -16,17 +16,15 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Color Blindness Simulator</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Simulatore di Daltonismo</title>
   <link rel="stylesheet" href="css/destyle.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet">
-  <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
 </head>
 
 <body>
   <!-- Filter definitions -->
-  <svg id="colorblind-filters">
+  <svg id="colorblind-filters" style="display:none;">
     <defs>
       <filter id="protanomaly">
         <feColorMatrix in="SourceGraphic"
@@ -95,65 +93,54 @@
     </defs>
   </svg>
   <header>
-    <img src="img/logo2.png" alt="">
-    <h1>Color Blindness Simulator</h1>
+    <h1>Simulatore di Daltonismo</h1>
   </header>
   <main>
     <section id="explanation">
-      <p>Need a quick way to make sure your design/diagram/figure is colorblind-friendly?</p>
-      <p>Use this simulator to check out if your colors will retain the same effect for different kinds of vision.</p>
-      <p>Conveniently download transformed gallery for future reference.</p>
+      <p>Hai bisogno di un modo rapido per assicurarti che il tuo disegno/diagramma/figura sia adatto ai daltonici?</p>
+      <p>Usa questo simulatore per verificare se i tuoi colori manterranno lo stesso effetto per diversi tipi di visione.</p>
+      <p>Scarica comodamente la galleria trasformata per futuro riferimento.</p>
     </section>
     <div id="file-input">
-      <h2><span class="emphasized">Step 1.</span> Select an image file</h2>
+      <h2><span class="emphasized">Passo 1.</span>Seleziona un'immagine</h2>
       <input type="file" id="img-picker" accept="image/*">
-      <p>Gallery will replace the one below.</p>
+      <p>La galleria sostituirà quella qui sotto.</p>
     </div>
     <div id="download-button">
-      <h2><span class="emphasized">Step 2.</span> Click button to download gallery</h2>
-      <button id="download-button" onclick="downloadGallery()">
-        <i class="fa fa-download" aria-hidden="true"></i>
-        Download simulations
-      </button>
+      <h2><span class="emphasized">Passo 2.</span>Fare clic sul pulsante per scaricare la galleria</h2>
+      <button onclick="downloadGallery()">Scarica simulazioni</button>
     </div>
     <a href="" id="blank" style="display: none"></a>
     <div id="gallery">
       <figure>
-        <figcaption>Normal</figcaption>
+        <figcaption>Normale</figcaption>
         <img id="normalImg" src="./img/conical-gradient.png" alt="Uploaded normal image" style="width: 300px; height: auto;">
       </figure>
       <figure>
-        <figcaption>protanomaly</figcaption><img src="./img/conical-gradient.png" class="img--protanomaly" style="width: 300px; height: auto;"></figure>
+        <figcaption>Protanomalia</figcaption><img src="./img/conical-gradient.png" class="img--protanomaly" style="width: 300px; height: auto;"></figure>
       <figure>
-        <figcaption>protanopia</figcaption><img src="./img/conical-gradient.png" class="img--protanopia" style="width: 300px; height: auto;"></figure>
+        <figcaption>Protanopia</figcaption><img src="./img/conical-gradient.png" class="img--protanopia" style="width: 300px; height: auto;"></figure>
       <figure>
-        <figcaption>deuteranomaly</figcaption><img src="./img/conical-gradient.png" class="img--deuteranomaly" style="width: 300px; height: auto;"></figure>
+        <figcaption>Deuteranomalia</figcaption><img src="./img/conical-gradient.png" class="img--deuteranomaly" style="width: 300px; height: auto;"></figure>
       <figure>
-        <figcaption>deuteranopia</figcaption><img src="./img/conical-gradient.png" class="img--deuteranopia" style="width: 300px; height: auto;"></figure>
+        <figcaption>Deuteranopia</figcaption><img src="./img/conical-gradient.png" class="img--deuteranopia" style="width: 300px; height: auto;"></figure>
       <figure>
-        <figcaption>tritanomaly</figcaption><img src="./img/conical-gradient.png" class="img--tritanomaly" style="width: 300px; height: auto;"></figure>
+        <figcaption>Tritanomalia</figcaption><img src="./img/conical-gradient.png" class="img--tritanomaly" style="width: 300px; height: auto;"></figure>
       <figure>
-        <figcaption>tritanopia</figcaption><img src="./img/conical-gradient.png" class="img--tritanopia" style="width: 300px; height: auto;"></figure>
+        <figcaption>Tritanopia</figcaption><img src="./img/conical-gradient.png" class="img--tritanopia" style="width: 300px; height: auto;"></figure>
       <figure>
-        <figcaption>achromatomaly</figcaption><img src="./img/conical-gradient.png" class="img--achromatomaly" style="width: 300px; height: auto;"></figure>
+        <figcaption>Acromatomalia</figcaption><img src="./img/conical-gradient.png" class="img--achromatomaly" style="width: 300px; height: auto;"></figure>
       <figure>
-        <figcaption>achromatopsia</figcaption><img src="./img/conical-gradient.png" class="img--achromatopsia" style="width: 300px; height: auto;"></figure>
+        <figcaption>Acromatopsia</figcaption><img src="./img/conical-gradient.png" class="img--achromatopsia" style="width: 300px; height: auto;"></figure>
     </div>
   </main>
-  <hr />
-  <section id="contributors">
-    <h2>Contributors</h2>
-    <div id="contributors-gallery">
-      
-    </div>
-  </section>
   <footer>
-    <p>Made with 🤍 by <a href="https://laura.rochaprado.com" target="_blank" rel="noopener noreferrer">LRP</a> &middot 2020</p>
+    <p>Fatto con 🤍 da <a href="https://laura.rochaprado.com" target="_blank" rel="noopener noreferrer">LRP</a> &middot 2020</p>
     <!-- <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/arbolitoloco"><img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee"><span style="margin:5px;font-size:19px !important;">Buy me a coffee</span></a> -->
   </footer>
 
 </body>
 <script src="js/html2canvas.min.js"></script>
 <script src="js/filters.js"></script>
-<script src="js/contributors-gallery.js"></script>
+
 </html>

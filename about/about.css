@@ -1,0 +1,44 @@
+main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction:column;
+    
+}
+
+.container{
+    padding:0 2vw 0 2vw;
+}
+
+p{
+    margin:0.5em;
+}
+
+.titles{
+    margin:0.3em 0 0.7em 0;
+}
+
+.groups{
+    margin:3vh 0 3vh 0;
+}
+
+.content{
+    margin:1em 0 1.3em 0;
+}
+
+li{
+    margin:0.5em 0 0.5em 2em;
+    list-style-type:circle;
+}
+
+.subtitles{
+    margin:0.5em 0 0 0.5em;
+    font-weight:600;
+}
+
+h2 {
+    font-weight:700;
+    background-color:black;
+    color:white;
+    width:350px;
+    padding:5px;
+}

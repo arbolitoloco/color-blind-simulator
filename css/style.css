@@ -1,3 +1,5 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
 /* General styles */
 
 body {
@@ -62,6 +64,13 @@ header,
 
 header {
   grid-area: head;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header h1, header img{
+  max-height: 70px;
+  margin: auto 10px;
 }
 
 header,
@@ -103,6 +112,8 @@ main {
   box-shadow: 0 0 20px #ccc;
   border-radius: 15px;
   color: white;
+  font-size: larger;
+  margin: 20px;
 }
 #download-button button:hover {
   background-color: #3e8e41;
@@ -156,6 +167,52 @@ main {
 .img--achromatopsia {
   filter: url('#achromatopsia');
 }
+
+/* Contributors Gallery */
+#contributors {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#contributors > h2 {
+  margin: 20px 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+#contributors-gallery {
+  max-width: 1100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contributor {
+  display: flex;
+  border: 1px solid #3d3d4d;
+  border-radius: 15px;
+  margin: 10px 20px;
+  padding: 20px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contributor > img {
+  border: 1px solid #3d3d4d;
+  margin-bottom: 20px;
+  height: 126px;
+  width: 126px;
+  border-radius: 50%;
+}
+
+.contributor > a {
+  color: #494949;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 
 /* Credits */
@@ -212,3 +269,56 @@ footer {
   opacity: 0.85 !important;
   color: #ffffff !important;
 }
+
+/* Language menu */
+
+ul, ol{
+
+  list-style:none;
+  
+  }
+  
+  .nav li a{
+  
+  background-color:#000;
+  color:#fff;
+  text-decoration:none;
+  padding:10px 15px;
+  display:block;
+  }
+  
+  .nav li a:hover{
+  
+  background-color:#434343;
+  
+  }
+  
+  .nav li ul{
+  
+  display:none;
+  position:absolute;
+  min-height:140px;
+  }
+  
+  .nav li:hover > ul{
+  
+  display:block;
+  
+  }
+  
+  .nav li ul li{
+  
+  position:relative;
+  
+  }
+  
+  .nav li ul li ul{
+  
+  right:-140px;
+  top:0px;
+  
+  }
+  
+  .nav > li{
+  float:left;
+  }
